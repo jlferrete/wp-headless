@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { PostsListComponent } from './components/posts/posts-list/posts-list.component';
 import { PostComponent } from './components/posts/post/post.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppMaterialModule } from './app.material.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { PostComponent } from './components/posts/post/post.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    AppMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
