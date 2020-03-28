@@ -13,8 +13,10 @@ export class PostsListComponent implements OnInit {
 
   constructor( private dataWp: DataWpService) { }
 
+  posts$: Observable<PostI[]>;
+
   ngOnInit() {
-    this.dataWp.getPosts().subscribe(res => console.log(res));
+    this.posts$ = this.dataWp.getPosts();
   }
 
 }

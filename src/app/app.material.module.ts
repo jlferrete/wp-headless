@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatToolbarModule } from '@angular/material';
+import { MatToolbarModule, MatCardModule } from '@angular/material';
 
 const materialModules = [
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
 ];
 
 @NgModule({
