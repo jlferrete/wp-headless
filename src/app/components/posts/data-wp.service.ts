@@ -1,9 +1,19 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { PostI } from './post.interface';
+import { Observable } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class DataWpService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+  urlApi = 'http://headless.local/wp-json/wp/v2/posts?_embed';
+
+  getPosts(): Observable<PostI[]> {
+    return this.http.get<PostI[]>(this.urlApi, {
+      params: {
+        per_page: '9'
+      }
+    });
+  }
 }
